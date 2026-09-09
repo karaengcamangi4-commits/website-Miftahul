@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,13 +49,12 @@
     }
 
     gtag('js', new Date());
-
     gtag('config', 'G-V29F99RQ8M');
   </script>
 
   <meta name="theme-color" content="#080b0f">
 
-  <!-- FONT -->
+  <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -62,6 +63,856 @@
     rel="stylesheet"
   >
 
+  <!-- ICON -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,0.12), transparent 30%),
+        linear-gradient(135deg, #080b0f, #10151c 50%, #080b0f);
+      color: #f5f5f5;
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 11, 15, 0.92);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #d4af37;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #d9d9d9;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #d4af37;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      max-width: 1150px;
+      margin: auto;
+      padding: 90px 25px 60px;
+      text-align: center;
+    }
+
+    .profile {
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #d4af37;
+      padding: 4px;
+      background: #10151c;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #b9bec6;
+      font-size: 17px;
+    }
+
+    .tagline {
+      margin-top: 18px;
+      color: #d4af37 !important;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       SECTION
+    ========================== */
+
+    .section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 30px 25px 80px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title small {
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .section-title h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 38px;
+      margin: 8px 0;
+    }
+
+    .section-title p {
+      color: #aeb4bd;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* =========================
+       KARYA
+    ========================== */
+
+    .karya-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .karya-card {
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 20px;
+      padding: 30px;
+      transition: 0.35s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .karya-card::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: rgba(212,175,55,0.08);
+      border-radius: 50%;
+      top: -40px;
+      right: -40px;
+    }
+
+    .karya-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212,175,55,0.45);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    .icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      background: rgba(212,175,55,0.12);
+      color: #d4af37;
+      font-size: 25px;
+      margin-bottom: 22px;
+    }
+
+    .karya-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .karya-card p {
+      color: #adb3bc;
+      font-size: 15px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 20px;
+      color: #d4af37;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       MOTIVASI
+    ========================== */
+
+    .quote-box {
+      max-width: 900px;
+      margin: 20px auto 0;
+      padding: 45px 35px;
+      text-align: center;
+      border-radius: 25px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(212,175,55,0.12),
+          rgba(255,255,255,0.035)
+        );
+      border: 1px solid rgba(212,175,55,0.25);
+    }
+
+    .quote-box i {
+      font-size: 35px;
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+
+    .quote-box blockquote {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(23px, 4vw, 34px);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .quote-box span {
+      color: #aeb4bd;
+    }
+
+    /* =========================
+       TENTANG
+    ========================== */
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about p {
+      color: #b7bdc5;
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+       SOCIAL
+    ========================== */
+
+    .social {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .social a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50px;
+      color: #ddd;
+      transition: 0.3s;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .social a:hover {
+      color: #d4af37;
+      border-color: #d4af37;
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       SHARE
+    ========================== */
+
+    .share {
+      text-align: center;
+      margin-top: 45px;
+    }
+
+    .share button {
+      border: none;
+      cursor: pointer;
+      padding: 13px 24px;
+      border-radius: 50px;
+      background: #d4af37;
+      color: #080b0f;
+      font-weight: 700;
+      font-family: inherit;
+      transition: 0.3s;
+    }
+
+    .share button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(212,175,55,0.2);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      padding: 35px 20px;
+      color: #858c96;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 850px) {
+
+      .karya-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+
+      nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .karya-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .quote-box {
+        padding: 35px 22px;
+      }
+
+      .quote-box blockquote {
+        font-size: 23px;
+      }
+
+    }
+
+  </style>
 </head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header>
+    <div class="navbar">
+
+      <a href="index.html" class="logo">
+        MIFTAHUL <span>MUNIR</span>
+      </a>
+
+      <nav>
+        <a href="index.html">
+          Beranda
+        </a>
+
+        <a href="karya.html" class="active">
+          Karya Saya
+        </a>
+
+        <a href="#tentang">
+          Tentang
+        </a>
+
+        <a href="#kontak">
+          Kontak
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <img
+      src="assets/profile.jpg"
+      alt="Miftahul Munir, S.E."
+      class="profile"
+      onerror="this.style.display='none'"
+    >
+
+    <h1>
+      Karya <span>Saya</span>
+    </h1>
+
+    <p>
+      Selamat datang di ruang karya Miftahul Munir, S.E.
+      Tempat berbagi ide, inspirasi, kreativitas,
+      pengalaman, dan semangat untuk terus berkembang.
+    </p>
+
+    <p class="tagline">
+      INSPIRE • LEARN • GROW
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       KARYA
+  ========================== -->
+
+  <main>
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <small>Portfolio</small>
+
+        <h2>Kumpulan Karya</h2>
+
+        <p>
+          Beberapa bidang yang menjadi bagian dari perjalanan
+          kreativitas dan aktivitas saya.
+        </p>
+
+      </div>
+
+
+      <div class="karya-grid">
+
+
+        <!-- KARYA 1 -->
+
+        <article class="karya-card">
+
+          <div class="icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+
+          <h3>Konten Motivasi</h3>
+
+          <p>
+            Membagikan kata-kata motivasi, inspirasi,
+            dan pesan kehidupan yang dapat memberikan
+            semangat kepada siapa saja yang membacanya.
+          </p>
+
+          <a href="#" class="read-more">
+            Inspirasi →
+          </a>
+
+        </article>
+
+
+        <!-- KARYA 2 -->
+
+        <article class="karya-card">
+
+          <div class="icon">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+
+          <h3>Fotografi</h3>
+
+          <p>
+            Mengabadikan momen melalui fotografi dengan
+            pendekatan sederhana, estetik, dan penuh makna.
+          </p>
+
+          <a href="#" class="read-more">
+            Lihat Karya →
+          </a>
+
+        </article>
+
+
+        <!-- KARYA 3 -->
+
+        <article class="karya-card">
+
+          <div class="icon">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+
+          <h3>Tulisan Inspiratif</h3>
+
+          <p>
+            Menulis tentang kehidupan, perjuangan,
+            pengalaman, pembelajaran, dan perjalanan
+            menuju kehidupan yang lebih baik.
+          </p>
+
+          <a href="#" class="read-more">
+            Baca Tulisan →
+          </a>
+
+        </article>
+
+
+        <!-- KARYA 4 -->
+
+        <article class="karya-card">
+
+          <div class="icon">
+            <i class="fa-solid fa-video"></i>
+          </div>
+
+          <h3>Konten Kreator</h3>
+
+          <p>
+            Membuat konten yang informatif, inspiratif,
+            dan menghibur untuk memberikan manfaat
+            kepada masyarakat melalui media digital.
+          </p>
+
+          <a href="#" class="read-more">
+            Lihat Konten →
+          </a>
+
+        </article>
+
+
+        <!-- KARYA 5 -->
+
+        <article class="karya-card">
+
+          <div class="icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+
+          <h3>Website & Digital</h3>
+
+          <p>
+            Mengembangkan ide dan proyek digital
+            sebagai bagian dari proses belajar teknologi
+            serta membangun karya yang bermanfaat.
+          </p>
+
+          <a href="#" class="read-more">
+            Pelajari →
+          </a>
+
+        </article>
+
+
+        <!-- KARYA 6 -->
+
+        <article class="karya-card">
+
+          <div class="icon">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+
+          <h3>Belajar & Berkembang</h3>
+
+          <p>
+            Setiap pengalaman adalah pelajaran.
+            Setiap kegagalan adalah kesempatan untuk
+            tumbuh menjadi pribadi yang lebih baik.
+          </p>
+
+          <a href="#" class="read-more">
+            Selengkapnya →
+          </a>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MOTIVASI
+    ========================== -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <small>Pesan</small>
+
+        <h2>Satu Pesan Untukmu</h2>
+
+      </div>
+
+      <div class="quote-box">
+
+        <i class="fa-solid fa-quote-left"></i>
+
+        <blockquote>
+          "Jangan takut berjalan perlahan.
+          Yang perlu ditakuti adalah berhenti
+          ketika masih ada kesempatan untuk berjuang."
+        </blockquote>
+
+        <span>
+          — Miftahul Munir, S.E.
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TENTANG
+    ========================== -->
+
+    <section class="section" id="tentang">
+
+      <div class="section-title">
+
+        <small>Tentang Saya</small>
+
+        <h2>Miftahul Munir, S.E.</h2>
+
+      </div>
+
+      <div class="about">
+
+        <p>
+          Saya adalah Miftahul Munir, S.E.,
+          lahir di Jeneponto pada 26 Januari 1995
+          dan berdomisili di Kabupaten Bantaeng.
+        </p>
+
+        <p>
+          Melalui website ini saya ingin berbagi
+          karya, pengalaman, tulisan, motivasi,
+          dan berbagai hal positif yang dapat
+          memberikan manfaat bagi orang lain.
+        </p>
+
+        <p>
+          Saya percaya bahwa setiap orang memiliki
+          perjalanan masing-masing. Tidak harus
+          menjadi sempurna untuk memulai.
+          Yang terpenting adalah terus belajar,
+          terus berusaha, dan tidak mudah menyerah.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         KONTAK
+    ========================== -->
+
+    <section class="section" id="kontak">
+
+      <div class="section-title">
+
+        <small>Hubungi Saya</small>
+
+        <h2>Mari Terhubung</h2>
+
+        <p>
+          Temukan saya melalui media sosial dan
+          mari berbagi hal-hal positif.
+        </p>
+
+      </div>
+
+
+      <div class="social">
+
+        <!-- WHATSAPP -->
+
+        <a
+          href="https://wa.me/6285298477494"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          WhatsApp
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-instagram"></i>
+          Instagram
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a
+          href="https://www.tiktok.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+          TikTok
+        </a>
+
+      </div>
+
+
+      <!-- SHARE -->
+
+      <div class="share">
+
+        <button onclick="shareWebsite()">
+          <i class="fa-solid fa-share-nodes"></i>
+          Bagikan Website
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      © <span id="year"></span>
+      <strong>Miftahul Munir, S.E.</strong>
+      — Inspire • Learn • Grow
+    </p>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    // Tahun otomatis
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Tombol share
+
+    function shareWebsite() {
+
+      const shareData = {
+        title: "Karya Saya | Miftahul Munir, S.E.",
+        text: "Kunjungi website Karya Saya milik Miftahul Munir, S.E.",
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+
+        navigator.share(shareData);
+
+      } else {
+
+        navigator.clipboard.writeText(window.location.href);
+
+        alert(
+          "Link website berhasil disalin. Silakan kirim kepada teman."
+        );
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
