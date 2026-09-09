@@ -4,130 +4,1204 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Artikel Motivasi & Inspirasi | Miftahul Munir, S.E.</title>
+  <title>Artikel & Inspirasi | Miftahul Munir, S.E.</title>
 
-  <meta name="description" content="Kumpulan artikel motivasi, inspirasi, kehidupan, mindset dan semangat untuk terus berjuang dari Miftahul Munir, S.E.">
+  <meta
+    name="description"
+    content="Kumpulan artikel motivasi, inspirasi, kehidupan, perjuangan dan pengembangan diri oleh Miftahul Munir, S.E."
+  >
 
   <meta name="author" content="Miftahul Munir, S.E.">
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://karaengcamangi4-commits.github.io/website-Miftahul/artikel.html">
+  <link
+    rel="canonical"
+    href="https://karaengcamangi4-commits.github.io/website-Miftahul/artikel.html"
+  >
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Artikel Motivasi & Inspirasi | Miftahul Munir, S.E.">
-  <meta property="og:description" content="Baca artikel tentang motivasi, kehidupan, mindset dan semangat untuk terus berjuang.">
-  <meta property="og:url" content="https://karaengcamangi4-commits.github.io/website-Miftahul/artikel.html">
-  <meta property="og:image" content="https://karaengcamangi4-commits.github.io/website-Miftahul/assets/profile.jpg">
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Artikel & Inspirasi | Miftahul Munir, S.E.">
+  <meta
+    property="og:description"
+    content="Kumpulan tulisan inspiratif tentang kehidupan, perjuangan, motivasi dan pengembangan diri."
+  >
+  <meta
+    property="og:url"
+    content="https://karaengcamangi4-commits.github.io/website-Miftahul/artikel.html"
+  >
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V29F99RQ8M"></script>
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-    function gtag() {
-      dataLayer.push(arguments);
+  <!-- ICON -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+
+    /* =========================
+       RESET
+    ========================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    gtag('js', new Date());
-    gtag('config', 'G-V29F99RQ8M');
-  </script>
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <meta name="theme-color" content="#080b0f">
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: #f5f5f5;
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(212,175,55,0.13),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #070a0e,
+          #10151c 50%,
+          #080b0f
+        );
+      line-height: 1.7;
+      min-height: 100vh;
+    }
 
-  <link rel="stylesheet" href="style.css">
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(7,10,14,0.93);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar {
+      max-width: 1150px;
+      margin: auto;
+      padding: 17px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: .5px;
+    }
+
+    .logo span {
+      color: #d4af37;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #c8cbd0;
+      transition: .3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #d4af37;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      max-width: 1050px;
+      margin: auto;
+      padding: 90px 25px 70px;
+      text-align: center;
+    }
+
+    .hero-label {
+      display: inline-block;
+      color: #d4af37;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(40px, 7vw, 70px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: #aeb4bd;
+      font-size: 17px;
+    }
+
+    /* =========================
+       SEARCH
+    ========================== */
+
+    .search-box {
+      max-width: 650px;
+      margin: 35px auto 0;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 17px 55px 17px 22px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,.1);
+      outline: none;
+      background: rgba(255,255,255,.05);
+      color: white;
+      font-family: inherit;
+      font-size: 15px;
+    }
+
+    .search-box input::placeholder {
+      color: #777e88;
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #d4af37;
+    }
+
+    /* =========================
+       CONTAINER
+    ========================== */
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 10px 25px 90px;
+    }
+
+    /* =========================
+       FEATURED ARTICLE
+    ========================== */
+
+    .featured {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      min-height: 430px;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 70px;
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,.95),
+          rgba(0,0,0,.15)
+        ),
+        linear-gradient(
+          135deg,
+          #27251c,
+          #14181d
+        );
+      border: 1px solid rgba(212,175,55,.22);
+    }
+
+    .featured-content {
+      padding: 45px;
+      max-width: 800px;
+    }
+
+    .featured-badge {
+      display: inline-block;
+      padding: 6px 13px;
+      border-radius: 50px;
+      background: #d4af37;
+      color: #080b0f;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .featured h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(30px, 5vw, 50px);
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .featured p {
+      color: #c4c8ce;
+      max-width: 700px;
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: #9da3ac;
+      font-size: 13px;
+    }
+
+    .meta i {
+      color: #d4af37;
+      margin-right: 5px;
+    }
+
+    /* =========================
+       SECTION TITLE
+    ========================== */
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading small {
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 38px;
+      margin-top: 7px;
+    }
+
+    /* =========================
+       CATEGORY
+    ========================== */
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .category {
+      padding: 9px 18px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.035);
+      color: #bfc4cb;
+      cursor: pointer;
+      transition: .3s;
+      font-size: 13px;
+    }
+
+    .category:hover,
+    .category.active {
+      background: #d4af37;
+      color: #080b0f;
+      border-color: #d4af37;
+      font-weight: 700;
+    }
+
+    /* =========================
+       ARTICLE GRID
+    ========================== */
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .article-card {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 22px;
+      overflow: hidden;
+      transition: .35s;
+    }
+
+    .article-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212,175,55,.4);
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    }
+
+    .article-image {
+      height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(212,175,55,.18),
+          rgba(255,255,255,.025)
+        );
+    }
+
+    .article-image i {
+      font-size: 55px;
+      color: #d4af37;
+      opacity: .9;
+    }
+
+    .article-body {
+      padding: 25px;
+    }
+
+    .article-category {
+      color: #d4af37;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .article-body h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .article-body p {
+      color: #aeb4bd;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .article-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .article-date {
+      font-size: 12px;
+      color: #777f89;
+    }
+
+    .read {
+      color: #d4af37;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       READING MESSAGE
+    ========================== */
+
+    .reading-message {
+      max-width: 850px;
+      margin: 80px auto 0;
+      text-align: center;
+      padding: 45px 30px;
+      border-radius: 25px;
+      border: 1px solid rgba(212,175,55,.2);
+      background: rgba(212,175,55,.06);
+    }
+
+    .reading-message i {
+      color: #d4af37;
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .reading-message h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .reading-message p {
+      color: #aeb4bd;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* =========================
+       SHARE
+    ========================== */
+
+    .share {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .share button {
+      border: 0;
+      border-radius: 50px;
+      padding: 13px 25px;
+      background: #d4af37;
+      color: #080b0f;
+      font-family: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .share button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(212,175,55,.2);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+      padding: 35px 20px;
+      color: #777f89;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+
+    /* =========================
+       HIDDEN
+    ========================== */
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 850px) {
+
+      .article-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+
+      nav {
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .featured {
+        min-height: 390px;
+      }
+
+      .featured-content {
+        padding: 28px;
+      }
+
+      .article-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2 {
+        font-size: 32px;
+      }
+
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">MIFTAHUL MUNIR</div>
 
-    <div class="nav-links">
-      <a href="index.html">Beranda</a>
-      <a href="artikel.html">Artikel</a>
-      <a href="karya.html">Karya Saya</a>
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header>
+
+    <div class="navbar">
+
+      <a href="index.html" class="logo">
+        MIFTAHUL <span>MUNIR</span>
+      </a>
+
+      <nav>
+
+        <a href="index.html">
+          Beranda
+        </a>
+
+        <a href="karya.html">
+          Karya Saya
+        </a>
+
+        <a href="artikel.html" class="active">
+          Artikel
+        </a>
+
+      </nav>
+
     </div>
-  </nav>
 
-  <!-- HEADER -->
-  <header class="hero">
-    <h1>Artikel Motivasi & Inspirasi</h1>
-
-    <p>
-      Tulisan sederhana tentang kehidupan, perjuangan,
-      mindset, pembelajaran dan semangat untuk terus berkembang.
-    </p>
   </header>
 
-  <!-- ARTIKEL -->
-  <main>
 
-    <article id="mulai">
-      <h2>Jangan Menunggu Percaya Diri untuk Memulai</h2>
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="hero-label">
+      Journal & Inspiration
+    </div>
+
+    <h1>
+      Kata, <span>Makna</span> & Perjalanan
+    </h1>
+
+    <p>
+      Kumpulan tulisan tentang kehidupan, perjuangan,
+      motivasi, pengalaman, pengembangan diri,
+      dan hal-hal sederhana yang memiliki makna.
+    </p>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Cari artikel yang ingin Anda baca..."
+        onkeyup="searchArticle()"
+      >
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTENT
+  ========================== -->
+
+  <main class="container">
+
+
+    <!-- ARTIKEL UNGGULAN -->
+
+    <section>
+
+      <div class="featured">
+
+        <div class="featured-content">
+
+          <span class="featured-badge">
+            Artikel Unggulan
+          </span>
+
+          <h2>
+            Tidak Semua Perjalanan Harus Cepat
+          </h2>
+
+          <p>
+            Dalam hidup, kita sering merasa tertinggal
+            ketika melihat pencapaian orang lain.
+            Padahal setiap manusia memiliki waktu,
+            jalan, dan cerita yang berbeda.
+          </p>
+
+          <div class="meta">
+
+            <span>
+              <i class="fa-regular fa-calendar"></i>
+              9 September 2026
+            </span>
+
+            <span>
+              <i class="fa-regular fa-clock"></i>
+              4 menit membaca
+            </span>
+
+            <span>
+              <i class="fa-solid fa-tag"></i>
+              Motivasi
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- JUDUL -->
+
+    <div class="section-heading">
+
+      <small>Artikel Terbaru</small>
+
+      <h2>Temukan Inspirasi</h2>
+
+    </div>
+
+
+    <!-- KATEGORI -->
+
+    <div class="categories">
+
+      <button
+        class="category active"
+        onclick="filterCategory('all', this)"
+      >
+        Semua
+      </button>
+
+      <button
+        class="category"
+        onclick="filterCategory('motivasi', this)"
+      >
+        Motivasi
+      </button>
+
+      <button
+        class="category"
+        onclick="filterCategory('kehidupan', this)"
+      >
+        Kehidupan
+      </button>
+
+      <button
+        class="category"
+        onclick="filterCategory('perjuangan', this)"
+      >
+        Perjuangan
+      </button>
+
+      <button
+        class="category"
+        onclick="filterCategory('inspirasi', this)"
+      >
+        Inspirasi
+      </button>
+
+    </div>
+
+
+    <!-- =========================
+         ARTICLE GRID
+    ========================== -->
+
+    <div class="article-grid" id="articleGrid">
+
+
+      <!-- ARTIKEL 1 -->
+
+      <article
+        class="article-card"
+        data-category="motivasi"
+        data-title="Jangan Takut Memulai Dari Nol"
+      >
+
+        <div class="article-image">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+
+        <div class="article-body">
+
+          <div class="article-category">
+            Motivasi
+          </div>
+
+          <h3>
+            Jangan Takut Memulai Dari Nol
+          </h3>
+
+          <p>
+            Tidak ada yang salah dengan memulai kembali.
+            Terkadang, awal yang sederhana adalah
+            jalan menuju sesuatu yang luar biasa.
+          </p>
+
+          <div class="article-footer">
+
+            <span class="article-date">
+              8 September 2026
+            </span>
+
+            <a href="#" class="read">
+              Baca →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTIKEL 2 -->
+
+      <article
+        class="article-card"
+        data-category="kehidupan"
+        data-title="Hidup Tidak Harus Selalu Sempurna"
+      >
+
+        <div class="article-image">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+
+        <div class="article-body">
+
+          <div class="article-category">
+            Kehidupan
+          </div>
+
+          <h3>
+            Hidup Tidak Harus Selalu Sempurna
+          </h3>
+
+          <p>
+            Kesempurnaan bukan tujuan utama.
+            Belajar menerima kekurangan dan tetap
+            melangkah adalah bagian dari kehidupan.
+          </p>
+
+          <div class="article-footer">
+
+            <span class="article-date">
+              7 September 2026
+            </span>
+
+            <a href="#" class="read">
+              Baca →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTIKEL 3 -->
+
+      <article
+        class="article-card"
+        data-category="perjuangan"
+        data-title="Tetap Berjalan Walau Perlahan"
+      >
+
+        <div class="article-image">
+          <i class="fa-solid fa-person-walking"></i>
+        </div>
+
+        <div class="article-body">
+
+          <div class="article-category">
+            Perjuangan
+          </div>
+
+          <h3>
+            Tetap Berjalan Walau Perlahan
+          </h3>
+
+          <p>
+            Langkah kecil yang dilakukan setiap hari
+            jauh lebih berarti daripada rencana besar
+            yang tidak pernah dimulai.
+          </p>
+
+          <div class="article-footer">
+
+            <span class="article-date">
+              6 September 2026
+            </span>
+
+            <a href="#" class="read">
+              Baca →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTIKEL 4 -->
+
+      <article
+        class="article-card"
+        data-category="inspirasi"
+        data-title="Jadilah Alasan Seseorang Tetap Berharap"
+      >
+
+        <div class="article-image">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+
+        <div class="article-body">
+
+          <div class="article-category">
+            Inspirasi
+          </div>
+
+          <h3>
+            Jadilah Alasan Seseorang Tetap Berharap
+          </h3>
+
+          <p>
+            Kebaikan kecil mungkin terlihat sederhana,
+            tetapi bisa menjadi sesuatu yang sangat berarti
+            bagi seseorang yang sedang berjuang.
+          </p>
+
+          <div class="article-footer">
+
+            <span class="article-date">
+              5 September 2026
+            </span>
+
+            <a href="#" class="read">
+              Baca →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTIKEL 5 -->
+
+      <article
+        class="article-card"
+        data-category="motivasi"
+        data-title="Kegagalan Bukan Akhir"
+      >
+
+        <div class="article-image">
+          <i class="fa-solid fa-mountain"></i>
+        </div>
+
+        <div class="article-body">
+
+          <div class="article-category">
+            Motivasi
+          </div>
+
+          <h3>
+            Kegagalan Bukan Akhir
+          </h3>
+
+          <p>
+            Ada kalanya kita jatuh bukan karena
+            kita tidak mampu, tetapi karena kehidupan
+            sedang mengajarkan cara untuk menjadi lebih kuat.
+          </p>
+
+          <div class="article-footer">
+
+            <span class="article-date">
+              4 September 2026
+            </span>
+
+            <a href="#" class="read">
+              Baca →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- ARTIKEL 6 -->
+
+      <article
+        class="article-card"
+        data-category="kehidupan"
+        data-title="Belajar Bersyukur Dengan Apa Yang Ada"
+      >
+
+        <div class="article-image">
+          <i class="fa-solid fa-sun"></i>
+        </div>
+
+        <div class="article-body">
+
+          <div class="article-category">
+            Kehidupan
+          </div>
+
+          <h3>
+            Belajar Bersyukur Dengan Apa Yang Ada
+          </h3>
+
+          <p>
+            Kebahagiaan tidak selalu datang dari
+            memiliki lebih banyak, tetapi dari kemampuan
+            menghargai apa yang telah kita miliki.
+          </p>
+
+          <div class="article-footer">
+
+            <span class="article-date">
+              3 September 2026
+            </span>
+
+            <a href="#" class="read">
+              Baca →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <!-- PESAN -->
+
+    <div class="reading-message">
+
+      <i class="fa-solid fa-book-open"></i>
+
+      <h2>
+        Semoga Ada Makna Yang Anda Temukan
+      </h2>
 
       <p>
-        Banyak orang menunggu dirinya merasa siap sebelum memulai sesuatu.
-        Padahal, sering kali rasa percaya diri justru tumbuh setelah kita
-        berani mengambil langkah pertama.
+        Tidak semua tulisan harus mengubah dunia.
+        Terkadang, satu kalimat yang tepat pada waktu
+        yang tepat sudah cukup untuk mengubah hari seseorang.
       </p>
 
-      <p>
-        Jangan takut memulai dari kecil. Setiap perjalanan besar selalu
-        dimulai dari satu langkah sederhana.
-      </p>
+    </div>
 
-      <p><strong>Pesan:</strong> Mulailah sekarang, karena kesempurnaan
-      bukan syarat untuk bergerak maju.</p>
-    </article>
 
-    <article id="proses">
-      <h2>Proses yang Lambat Tetap Sebuah Kemajuan</h2>
+    <!-- SHARE -->
 
-      <p>
-        Tidak semua perjalanan harus berlangsung cepat.
-        Ada kalanya kita berjalan perlahan, menghadapi kegagalan,
-        belajar kembali dan mencoba lagi.
-      </p>
+    <div class="share">
 
-      <p>
-        Jangan membandingkan prosesmu dengan perjalanan orang lain.
-        Yang terpenting adalah kamu tetap bergerak.
-      </p>
+      <button onclick="shareWebsite()">
 
-      <p><strong>Pesan:</strong> Lambat bukan berarti gagal.
-      Selama masih berjalan, masih ada kemajuan.</p>
-    </article>
+        <i class="fa-solid fa-share-nodes"></i>
 
-    <article id="rencana">
-      <h2>Tidak Semua Hal Harus Sesuai Rencana</h2>
+        Bagikan Halaman Artikel
 
-      <p>
-        Dalam kehidupan, ada banyak hal yang berada di luar kendali kita.
-        Rencana bisa berubah, harapan bisa berbeda dan perjalanan bisa
-        membawa kita ke tempat yang tidak pernah kita bayangkan.
-      </p>
+      </button>
 
-      <p>
-        Belajarlah menerima perubahan tanpa kehilangan semangat
-        untuk terus berusaha.
-      </p>
-
-      <p><strong>Pesan:</strong> Kita boleh memiliki rencana,
-      tetapi tetaplah percaya bahwa setiap perjalanan memiliki hikmahnya.</p>
-    </article>
+    </div>
 
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
+
     <p>
-      © 2026 Miftahul Munir, S.E. |
-      Inspire • Learn • Grow
+      © <span id="year"></span>
+      <strong>Miftahul Munir, S.E.</strong>
+      — Inspire • Learn • Grow
     </p>
+
   </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* TAHUN OTOMATIS */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* PENCARIAN ARTIKEL */
+
+    function searchArticle() {
+
+      const input =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+      const cards =
+        document.querySelectorAll(".article-card");
+
+      cards.forEach(function(card) {
+
+        const title =
+          card.dataset.title.toLowerCase();
+
+        const category =
+          card.dataset.category.toLowerCase();
+
+        if (
+          title.includes(input) ||
+          category.includes(input)
+        ) {
+
+          card.classList.remove("hidden");
+
+        } else {
+
+          card.classList.add("hidden");
+
+        }
+
+      });
+
+    }
+
+
+    /* FILTER KATEGORI */
+
+    function filterCategory(category, button) {
+
+      const cards =
+        document.querySelectorAll(".article-card");
+
+      const buttons =
+        document.querySelectorAll(".category");
+
+      buttons.forEach(function(btn) {
+
+        btn.classList.remove("active");
+
+      });
+
+      button.classList.add("active");
+
+      cards.forEach(function(card) {
+
+        if (
+          category === "all" ||
+          card.dataset.category === category
+        ) {
+
+          card.classList.remove("hidden");
+
+        } else {
+
+          card.classList.add("hidden");
+
+        }
+
+      });
+
+    }
+
+
+    /* BAGIKAN */
+
+    function shareWebsite() {
+
+      const shareData = {
+
+        title:
+          "Artikel & Inspirasi | Miftahul Munir, S.E.",
+
+        text:
+          "Temukan artikel motivasi dan inspirasi dari Miftahul Munir, S.E.",
+
+        url:
+          window.location.href
+
+      };
+
+      if (navigator.share) {
+
+        navigator.share(shareData);
+
+      } else {
+
+        navigator.clipboard.writeText(
+          window.location.href
+        );
+
+        alert(
+          "Link artikel berhasil disalin. Silakan bagikan kepada teman."
+        );
+
+      }
+
+    }
+
+  </script>
 
 </body>
 </html>
